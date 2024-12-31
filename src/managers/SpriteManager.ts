@@ -1,7 +1,7 @@
 import { createSprite } from '../utils/spriteRenderer';
 import { SPRITES, COLORS } from '../assets/sprites';
-import { Item } from '../models/items/Item';
-import { Monster } from '../models/Monster';
+// import { Item } from '../models/items/Item';
+// import { Monster } from '../models/Monster';
 import { Level } from '../models/Level';
 
 export class SpriteManager {
