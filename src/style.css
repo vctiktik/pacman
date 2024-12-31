@@ -1,0 +1,230 @@
+/* Game layout */
+.game-container {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Stats panel */
+#stats {
+  background: #2d2d3d;
+  padding: 20px;
+  border-radius: 8px;
+  color: white;
+  font-family: monospace;
+  font-size: 16px;
+  white-space: pre-line;
+  min-width: 200px;
+}
+
+/* Game map */
+#game {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 8px;
+  width: fit-content;
+}
+
+.row {
+  display: flex;
+}
+
+/* Individual cells */
+.cell {
+  width: 32px;
+  height: 32px;
+  background: #2d2d3d;
+  position: relative;
+}
+
+.cell-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  image-rendering: pixelated;
+}
+
+/* Wall styling */
+.wall {
+  background-color: #666;
+  background-size: cover !important;
+}
+
+/* Combat UI */
+.combat-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.95);
+  padding: 20px;
+  border-radius: 8px;
+  color: white;
+  font-family: monospace;
+  z-index: 1000;
+  min-width: 600px;
+  display: block;
+}
+
+.combat-popup.hidden {
+  display: none;
+}
+
+.combat-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.combatant {
+  flex: 1;
+}
+
+.sprite-container {
+  width: 96px;
+  height: 96px;
+  margin: 0 auto;
+}
+
+.sprite {
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  image-rendering: pixelated;
+}
+
+.vs {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ff6b6b;
+}
+
+.stats {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.hp-bar {
+  background: #444;
+  height: 20px;
+  border-radius: 10px;
+  position: relative;
+  margin: 5px 0;
+  overflow: hidden;
+}
+
+.hp-fill {
+  background: #ff6b6b;
+  height: 100%;
+  transition: width 0.3s ease;
+}
+
+.hp-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.combat-stats {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.combat-log {
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  min-height: 24px;
+}
+
+/* Merchant UI */
+.merchant-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.95);
+  padding: 20px;
+  border-radius: 8px;
+  color: white;
+  font-family: monospace;
+  z-index: 1000;
+}
+
+.merchant-popup.hidden {
+  display: none;
+}
+
+.merchant-container {
+  text-align: center;
+}
+
+.merchant-container h2 {
+  margin-bottom: 15px;
+}
+
+.upgrades {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.upgrade-btn,
+.close-btn {
+  background: #4a4a4a;
+  border: none;
+  padding: 10px;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.2s;
+}
+
+.upgrade-btn:hover:not(:disabled),
+.close-btn:hover {
+  background: #666;
+}
+
+.upgrade-btn.selected {
+  background: #7ac74f;
+}
+
+.upgrade-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.close-btn {
+  margin-top: 10px;
+  background: #ff6b6b;
+}
+
+.close-btn:hover {
+  background: #ff8585;
+}
